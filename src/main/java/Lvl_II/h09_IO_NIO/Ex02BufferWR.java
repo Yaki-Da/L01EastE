@@ -4,7 +4,7 @@ import java.io.*;
 
 public class Ex02BufferWR {
     public static void main(String[] args) {
-        String pathD = "C:\\Users\\union\\IdeaProjects\\LearningEastE_Tugulov\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
+        String pathD = "C:\\Users\\union\\IdeaProjects\\L01EastE\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
         String filenameR = "test01.txt";
         String filenameW = "test03.txt";
         String imgnameR = "img01.jpg";

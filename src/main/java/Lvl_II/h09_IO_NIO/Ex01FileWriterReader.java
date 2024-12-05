@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class Ex01FileWriterReader {
     public static void main(String[] args) throws IOException {
-        String filePath01 = "C:\\Users\\union\\IdeaProjects\\LearningEastE_Tugulov" +
+        String filePath01 = "C:\\Users\\union\\IdeaProjects\\L01EastE" +
                 "\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\test01.txt";
         String stext = "Много лет размышлял я над жизнью земной.\n" +
                     "Непонятного нет для меня под луной.\n" +

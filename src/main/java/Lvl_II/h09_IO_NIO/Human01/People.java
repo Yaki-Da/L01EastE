@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class People implements Serializable {
     String name;
     int age;
-    double salary;
+    transient double salary;
     Automobile car;
     public People(String name, int age, double salary, Automobile car) {
         this.name = name;

@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Ex05BSerilization {
     public static void main(String[] args) {
-        String pathD = "C:\\Users\\union\\IdeaProjects\\LearningEastE_Tugulov\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
+        String pathD = "C:\\Users\\union\\IdeaProjects\\L01EastE\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
         List<String> people;
         try (ObjectInputStream iOS = new ObjectInputStream(new FileInputStream(pathD+"\\Human01\\test02.b2"))){
             people = (ArrayList)iOS.readObject();
