@@ -6,8 +6,9 @@ import java.io.IOException;
 
 public class Ex01FileWriterReader {
     public static void main(String[] args) throws IOException {
-        String filePath01 = "C:\\Users\\union\\IdeaProjects\\L01EastE" +
-                "\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\test01.txt";
+        String pathA = System.getProperty("user.dir");
+        String pathD = "\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
+        String filePath01 = "test01.txt";
         String stext = "Много лет размышлял я над жизнью земной.\n" +
                     "Непонятного нет для меня под луной.\n" +
                     "Мне известно, что мне ничего не известно!\n" +
@@ -16,7 +17,7 @@ public class Ex01FileWriterReader {
         FileWriter fileW = null;
         FileReader fileR = null;
         try {
-            fileW = new FileWriter(filePath01);
+            fileW = new FileWriter(pathA+pathD+filePath01);
 //            fileW = new FileWriter("test02.txt");
 //            for(int i=0; i<stext.length(); i++) {
 //                fileW.write(stext.charAt(i));
@@ -31,7 +32,7 @@ public class Ex01FileWriterReader {
         }
         System.out.println("-------------------------");
         try {
-            fileR = new FileReader(filePath01);
+            fileR = new FileReader(pathA+pathD+filePath01);
             int memory;
             while((memory = fileR.read()) != -1) {
                 System.out.print((char)memory);

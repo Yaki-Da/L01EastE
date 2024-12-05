@@ -6,14 +6,15 @@ import java.util.List;
 
 public class Ex05ASerilization {
     public static void main(String[] args) {
-        String pathD = "C:\\Users\\union\\IdeaProjects\\L01EastE\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
+        String pathA = System.getProperty("user.dir");
+        String pathD = "\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
         List<String> people = new ArrayList<>();
         people.add("Москва");
         people.add("Нью-Йорк");
         people.add("Токио");
         people.add("Омск");
         people.add("Барнаул");
-        try (ObjectOutputStream oOS = new ObjectOutputStream(new FileOutputStream(pathD+"\\Human01\\test02.b2"))){
+        try (ObjectOutputStream oOS = new ObjectOutputStream(new FileOutputStream(pathA+pathD+"\\Human01\\test02.b2"))){
             oOS.writeObject(people);
             System.out.println("Серилизация произошла успешна!!!");
         } catch (FileNotFoundException e) {

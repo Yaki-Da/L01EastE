@@ -7,10 +7,11 @@ import java.io.ObjectOutputStream;
 
 public class Ex05A1Serialization {
     public static void main(String[] args) {
-        String pathD = "C:\\Users\\union\\IdeaProjects\\L01EastE\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
+        String pathA = System.getProperty("user.dir");
+        String pathD = "\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
         Automobile car = new Automobile("Mersedes-Benz","Black");
         People people = new People ("Эрнесто",28,225000.00,car);
-        try (ObjectOutputStream oOS = new ObjectOutputStream(new FileOutputStream(pathD+"\\Human01\\test03.b2"))){
+        try (ObjectOutputStream oOS = new ObjectOutputStream(new FileOutputStream(pathA+pathD+"\\Human01\\test03.b2"))){
             oOS.writeObject(people);
             System.out.println("Серилизация произошла успешна!!!");
         } catch (FileNotFoundException e) {

@@ -4,9 +4,10 @@ import java.io.*;
 
 public class Ex04DateIOStream {
     public static void main(String[] args) {
-        String pathD = "C:\\Users\\union\\IdeaProjects\\L01EastE\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
-        try (DataInputStream dIS = new DataInputStream(new FileInputStream(pathD+"test01.b2"));
-             DataOutputStream dOS = new DataOutputStream(new FileOutputStream(pathD+"test01.b2"))){
+        String pathA = System.getProperty("user.dir");
+        String pathD = "\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
+        try (DataInputStream dIS = new DataInputStream(new FileInputStream(pathA+pathD+"test01.b2"));
+             DataOutputStream dOS = new DataOutputStream(new FileOutputStream(pathA+pathD+"test01.b2"))){
             dOS.writeBoolean(true);
             dOS.writeByte(5);
             dOS.writeShort(200);

@@ -6,9 +6,10 @@ import java.util.List;
 
 public class Ex05BSerilization {
     public static void main(String[] args) {
-        String pathD = "C:\\Users\\union\\IdeaProjects\\L01EastE\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
+        String pathA = System.getProperty("user.dir");
+        String pathD = "\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
         List<String> people;
-        try (ObjectInputStream iOS = new ObjectInputStream(new FileInputStream(pathD+"\\Human01\\test02.b2"))){
+        try (ObjectInputStream iOS = new ObjectInputStream(new FileInputStream(pathA+pathD+"\\Human01\\test02.b2"))){
             people = (ArrayList)iOS.readObject();
             System.out.println(people);
             System.out.println("Десерилизация произошла успешна!!!");

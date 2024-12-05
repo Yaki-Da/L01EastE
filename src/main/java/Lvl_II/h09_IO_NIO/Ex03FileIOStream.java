@@ -7,9 +7,10 @@ import java.io.IOException;
 
 public class Ex03FileIOStream {
     public static void main(String[] args) {
-        String pathD = "C:\\Users\\union\\IdeaProjects\\L01EastE\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
-        try (FileInputStream fIS = new FileInputStream(pathD+"img01.jpg");
-             FileOutputStream fOS = new FileOutputStream(pathD+"img01_good_copy.jpg")){
+        String pathA = System.getProperty("user.dir");
+        String pathD = "\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
+        try (FileInputStream fIS = new FileInputStream(pathA+pathD+"img01.jpg");
+             FileOutputStream fOS = new FileOutputStream(pathA+pathD+"img01_good_copy.jpg")){
             int i;
             while ((i=fIS.read())!=-1) {
                 fOS.write(i);

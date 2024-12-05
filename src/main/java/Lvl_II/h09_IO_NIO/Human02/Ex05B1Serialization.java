@@ -6,9 +6,10 @@ import java.io.*;
 
 public class Ex05B1Serialization {
     public static void main(String[] args) {
-        String pathD = "C:\\Users\\union\\IdeaProjects\\L01EastE\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
+        String pathA = System.getProperty("user.dir");
+        String pathD = "\\src\\main\\java\\Lvl_II\\h09_IO_NIO\\";
         People people;
-        try (ObjectInputStream oIS = new ObjectInputStream(new FileInputStream(pathD+"\\Human01\\test03.b2"))){
+        try (ObjectInputStream oIS = new ObjectInputStream(new FileInputStream(pathA+pathD+"\\Human01\\test03.b2"))){
             people = (People)oIS.readObject();
             System.out.println(people);
         } catch (FileNotFoundException e) {
