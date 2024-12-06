@@ -3,6 +3,7 @@ package Lvl_II.h09_IO_NIO.Human01;
 import java.io.Serializable;
 
 public class People implements Serializable {
+    static final long serialVersionUID=3;
     String name;
     int age;
     transient double salary;
