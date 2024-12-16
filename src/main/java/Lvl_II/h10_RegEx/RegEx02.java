@@ -1,12 +1,12 @@
 package Lvl_II.h10_RegEx;
 
-import java.sql.SQLOutput;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class RegEx02 {
     public static void main(String[] args) {
         String s1 = "ABCD ABCE ABCFABCGABCH";
+        System.out.println(s1);
 
         Pattern pattern1 = Pattern.compile("ABC");
 
